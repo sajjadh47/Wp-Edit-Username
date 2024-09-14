@@ -3,7 +3,7 @@
 **Contributors:** sajjad67 \
 **Tags:** user,user-profile,profile-edit,edit,ajax,update,change-username,username \
 **Requires at least:** 5.6 \
-**Tested up to:** 6.0 \
+**Tested up to:** 6.6 \
 **Stable tag:** trunk \
 **License:** GPLv2 \
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html
@@ -91,6 +91,22 @@ Update inputs according to your requirement and you are good to go.
 
 
 ## Changelog
+
+### 1.0.7
+
+- Checked for latest wp version & updated coding styles... major changes nothing
+
+### 1.0.6
+
+- Checked for latest wp version & updated coding styles... major changes nothing
+
+### 1.0.5
+
+- Checked for latest wp version & updated coding styles... major changes nothing
+
+### 1.0.4
+
+- Checked for latest wp version & updated coding styles... major changes nothing
 
 ### 1.0.3
 

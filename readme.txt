@@ -2,8 +2,8 @@
 Contributors: sajjad67
 Tags: user,user-profile,profile-edit,edit,ajax,update,change-username,username
 Requires at least: 5.6
-Tested up to: 6.0
-Stable tag: trunk
+Tested up to: 6.6
+Stable tag: 1.0.7
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,16 +23,21 @@ This plugin adds feature to edit/change user username.
 
 `<?php
 
-add_filter( "wp_username_changed_email_subject", "your_function" );
-your_function($subject){
+add_filter( "wp_username_changed_email_subject", "your_function", 10, 3 );
+
+your_function( $subject, $old_username, $new_username )
+{
 	$subject = 'Your customized subject';
+	
 	return $subject;
 }
 
-add_filter( "wp_username_changed_email_body", "your_function" );
-function your_function($$old_username,$new_username){
-	
+add_filter( "wp_username_changed_email_body", "your_function", 10, 3 );
+
+function your_function( $email_body, $old_username, $new_username )
+{	
 	$email_body = "Your custom email text body.";
+	
 	return $email_body;
 }
 
@@ -72,6 +77,14 @@ Update inputs according to your requirement and you are good to go.
 4. After Username Changed Message.
 
 == Changelog ==
+= 1.0.7 =
+- Checked for latest wp version 6.6
+= 1.0.6 =
+- Fixed Plugin settings XSS vulnerability.
+= 1.0.5 =
+- Added additional email sender : User Only. Added bunch of shortcodes to use in the subject and email body.
+= 1.0.4 =
+- Checked for latest wp version 6.3
 = 1.0.3 =
 - Checked for latest wp version & updated coding styles... major changes nothing
 = 1.0.2 =
